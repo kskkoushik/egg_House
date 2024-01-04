@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            background-color: #fff; /* White background */
+            color: #333; /* Dark text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffc107; /* Yellow heading color */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ffc107; /* Yellow border for table cells */
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff; /* White background for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff8e1; /* Light yellow background for odd rows */
+        }
+
+        .user-box {
+            border: 1px solid #ffc107; /* Yellow border for user boxes */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #fff; /* White background for user boxes */
+        }
+    </style>
+</head>
+<body>
+    <h1>User Details</h1>
+    {% for details in users %}
+        <div class="user-box">
+           <p><strong>Name:</strong> {{ details.name }}</p>
+           <p><strong>Bread omlete:</strong> {{ details['bo']}}</p>
+            <p><strong>Bread omlete chese:</strong> {{ details['boc']}}</p>
+           <p><strong>Bread omlete chicken:</strong> {{ details['boch']}}</p>
+            <p><strong>Egg Chilli:</strong> {{ details['chiegg']}}</p>
+            <!-- Add more fields as needed -->
+        </div>
+    {% endfor %}
+</body>
+</html>

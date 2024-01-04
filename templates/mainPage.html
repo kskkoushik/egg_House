@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Information Form</title>
+   <style>
+     body {
+         font-family: Arial, sans-serif;
+         background-color: #fffdd0;
+         margin: 0;
+         padding: 0;
+     }
+
+     h1 {
+         color: #ffcc00;
+     }
+     h3 {
+          color: #ffcc00;
+      }
+     h4 {
+         color:  #fcfcf7
+     }
+
+     form {
+         max-width: 400px;
+         margin: 20px auto;
+         background-color: #ffffcc;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+
+     label {
+         display: block;
+         margin-bottom: 8px;
+         color: #333;
+     }
+
+     input,
+     select {
+         width: 100%;
+         padding: 8px;
+         margin-bottom: 16px;
+         box-sizing: border-box;
+     }
+
+     button {
+         background-color: #ffcc00;
+         color: #333;
+         padding: 10px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     button:hover {
+         background-color: #ffdb4d;
+     }
+
+   </style>
+</head>
+<body>
+    <h1>Token Taking Form</h1>
+    <form method="post" action="/take_submit">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="tokens">Number of Tokens taken :</label>
+        <input type="number" name="tokens" required>
+
+        <label for="token_type">Token Type:</label>
+        <select name="token_type" required>
+           <option value="bo">Bread oml</option>
+             <option value="boc">Bread oml cheese</option>
+             <option value="boch">Bread oml chick</option>
+           <option value="chiegg">chilli  egg</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Token Selling Form</h1>
+    <form method="post" action="/sold_submit">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="tokensold">Number of Tokens sold :</label>
+        <input type="number" name="tokensold" required>
+
+        <label for="token_type">Token Type:</label>
+        <select name="token_type" required>
+            <option value="bo">Bread oml</option>
+            <option value="boc">Bread oml cheese</option>
+            <option value="boch">Bread oml chick</option>
+          <option value="chiegg">chilli  egg</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>View details</h1>
+    <form method="post" action="/view_submit">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+  <h1>View every ones details</h1>
+  <form method="post" action="/view_everyones_details">
+      <button type="submit">Get Data</button>
+  </form>
+
+  <h3>Total tokens sold</h3>
+  <h4>{{sold_tokens}}</h4>
+  <h3>Total value sold</h3>
+  <h4>{{value_sold}}</h4>
+  
+</body>
+</html>

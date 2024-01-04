@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>User Details</h1>
+    <div class="user-details">
+        <p><strong>Name:</strong> {{ details.name }}</p>
+        <p><strong>Bread omlete:</strong> {{ details['bo']}}</p>
+         <p><strong>Bread omlete chese:</strong> {{ details['boc']}}</p>
+        <p><strong>Bread omlete chicken:</strong> {{ details['boch']}}</p>
+         <p><strong>Egg Chilli:</strong> {{ details['chiegg']}}</p>
+       <p><strong>Hold value:</strong> {{ details['hold_val']}}</p>
+       <p><strong>Sold value:</strong> {{ details['sold_val']}}</p>
+        
+    </div>
+</body>
+</html>
