@@ -1,7 +1,6 @@
 import flask
 import pymongo
 from flask import Flask
-from flask_pymongo import PyMongo
 from pymongo import MongoClient
 
 mongo_url = "mongodb+srv://radhakrishn1811:radhekrishna@cluster0.knjvanw.mongodb.net/?retryWrites=true&w=majority"
