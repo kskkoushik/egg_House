@@ -75,7 +75,7 @@ def sold_tokens(seller_name , type , sell_count):
      name.update_one({'name' : seller_name} , {'$set' :{'sold' : sol_count}})
      name.update_one({'name' : seller_name} , {'$set' :{'sold_val' : sval}})
      if mem['hold_val'] > 0 :  
-     name.update_one({'name' : seller_name} , {'$set' :{'hold_val' : val}})
+       name.update_one({'name' : seller_name} , {'$set' :{'hold_val' : val}})
      
 
 def data(find_name):
