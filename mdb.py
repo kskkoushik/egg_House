@@ -56,11 +56,11 @@ def sold_tokens(seller_name , type , sell_count):
       val = mem['hold_val'] - (value_pred(mem[type])*sell_count)
       sval = mem['sold_val'] + (value_pred(mem[type])*sell_count)
       if mem[type] > 0 : 
-       name.update_one({'name' : seller_name} , {'$set' :{type : count}})  
-     name.update_one({'name' : seller_name} , {'$set' :{'sold' : sol_count}})
-     name.update_one({'name' : seller_name} , {'$set' :{'sold_val' : sval}})
-     if mem['hold_val'] > 0 :  
-     name.update_one({'name' : seller_name} , {'$set' :{'hold_val' : val}})
+        name.update_one({'name' : seller_name} , {'$set' :{type : count}})  
+      name.update_one({'name' : seller_name} , {'$set' :{'sold' : sol_count}})
+      name.update_one({'name' : seller_name} , {'$set' :{'sold_val' : sval}})
+      if mem['hold_val'] > 0 :  
+        name.update_one({'name' : seller_name} , {'$set' :{'hold_val' : val}})
      
       
    else :
