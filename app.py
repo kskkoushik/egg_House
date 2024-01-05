@@ -1,5 +1,5 @@
 from flask import Flask, render_template , request
-from mdb import take_tokens , sold_tokens , data , get_all_data
+from mdb import  sold_tokens , data , get_all_data
 
 app = Flask(__name__)
 
@@ -15,14 +15,6 @@ def first():
        value_sold += user['sold_val']
      return render_template('mainPage.html' , sold_tokens = sold_tokens , value_sold = value_sold)
 
-@app.route('/take_submit',  methods = ['POST'])
-def taken_tok():
-   name = str(request.form['name'])
-   taken = int(request.form['tokens'])
-   type = str(request.form['token_type'])
-   name = name.upper()
-   take_tokens(name , taken , type)
-   return name + ' your stats updated sucessfully'
 
 @app.route('/sold_submit' , methods = ['POST'])
 def sold_tok():
