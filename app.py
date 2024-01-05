@@ -38,8 +38,9 @@ def sold_tok():
     
 @app.route('/view_submit' , methods = ['POST'])
 def view_data():
-   name = request.form['name']
-   details = data(name.upper())
+   name = str(request.form['name'])
+   name = name.upper()
+   details = data(name)
    return render_template('view.html' , details = details)
    
 @app.route('/view_everyones_details' , methods= ['POST'])
